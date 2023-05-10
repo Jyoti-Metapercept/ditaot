@@ -285,6 +285,11 @@ public IDs and system IDs for any DTD modules included in this plugin. -->
   <feature extension="ant.import" file="build_axf.xml"/>
   <feature extension="dita.conductor.pdf2.formatter.check" value="ah"/>
   <template file="xsl/fo/topic2fo_shell_axf_template.xsl"/>
+</plugin><plugin id="com.example.customplugin" version="0.0.0" xml:base="../plugins/com.example.customplugin/plugin.xml">
+  <require plugin="org.dita.pdf2"/>
+  <transtype desc="PDF on A4 paper" extends="pdf" name="customplugin"/>
+  <feature extension="dita.transtype.print" value="customplugin"/>
+  <feature extension="ant.import" file="integrator.xml"/>
 </plugin><plugin id="org.dita.pdf2.fop" version="3.6.0" xml:base="../plugins/org.dita.pdf2.fop/plugin.xml">
   <require plugin="org.dita.pdf2"/>
   <!-- extensions -->

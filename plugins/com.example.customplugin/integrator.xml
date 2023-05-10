@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <target name="dita2customplugin"
+       depends="dita2customplugin.init,
+                dita2pdf2"/>
+  <target name="dita2customplugin.init">
+    <property name="customization.dir"
+          location="${dita.plugin.com.example.customplugin.dir}/cfg"/>
+   </target>
+</project>
